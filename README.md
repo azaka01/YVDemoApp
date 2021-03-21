@@ -13,14 +13,13 @@ Developed using Android Studio 4.2 Beta 6 with Gradle Wrapper `6.7.1` and AGP `4
 It's a basic implementation of two screens 
 
     Master screen with 500 user pictures and names. Uses `seed` value `yv` in API call
-    detail screen with user picture and details 
+    Detail screen with user picture and details 
 
 There's a pull to refresh on the main screen in case an error occurs and data needs to be refetched.
 
 
-https://user-images.githubusercontent.com/1098487/111901772-cf3f6100-8a31-11eb-9b47-87358d8e7968.mp4
 
-
+![Demo](https://user-images.githubusercontent.com/1098487/111902517-c3ee3480-8a35-11eb-95e2-540f5fd77a8a.gif)
 
 ## Architecture
 
@@ -41,8 +40,11 @@ These Android Architecture components are used - MVVM, LiveData, Navigation, new
 All dependencies are referenced in `common\dependencies.gradle` 
 
 DI - I chose the new Hilt library as it's easier to integrate than Dagger and still supports the required features
+
 Image Loading - Coil is a new Kotlin-first image loading library with good performance
+
 RxJava2 - for network calls
+
 Unit tests - Mockito and Mockk
 
 ## Unit tests and code coverage
@@ -57,6 +59,7 @@ MapperCoverage.png![image](https://user-images.githubusercontent.com/1098487/111
 ## Improvements and Modifications
 
 DB caching can improve data persistence. This would live inside the `data` module.
+
 Use Coroutines with Flow instead of RxJava
 
 
