@@ -17,6 +17,11 @@ It's a basic implementation of two screens
 
 There's a pull to refresh on the main screen in case an error occurs and data needs to be refetched.
 
+
+https://user-images.githubusercontent.com/1098487/111901772-cf3f6100-8a31-11eb-9b47-87358d8e7968.mp4
+
+
+
 ## Architecture
 
 The app is implemented using a clean architecture approach 
@@ -43,6 +48,11 @@ Unit tests - Mockito and Mockk
 ## Unit tests and code coverage
 
 Classes with significant business logic have unit tests - `UsersViewModel` and `UserResponseMapper`
+
+DemoAppCoverage1.png![image](https://user-images.githubusercontent.com/1098487/111901857-51c82080-8a32-11eb-8343-18c5073ad0de.png)
+VMCoverage.png![image](https://user-images.githubusercontent.com/1098487/111901862-61476980-8a32-11eb-8c82-ed3cb2040c02.png)
+MapperCoverage.png![image](https://user-images.githubusercontent.com/1098487/111901863-64daf080-8a32-11eb-97aa-8e56c76862f6.png)
+
 
 ## Improvements and Modifications
 
