@@ -1,0 +1,65 @@
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs'
+}
+
+apply from: '../common/android.gradle'
+apply from: '../common/dependencies.gradle'
+
+android {
+    defaultConfig {
+        applicationId "com.intsoftdev.yvdemoapp"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation project(':domain')
+    implementation project(':data')
+
+    implementation corektx
+    implementation appcompatLib
+    implementation materialLib
+    implementation constraintLib
+    implementation hiltLib
+
+    implementation coilImageLib
+    implementation kotlinlib
+    implementation navUILib
+    implementation navFragLib
+    implementation lifeExtLib
+    implementation legacyLib
+
+    kapt hiltKapt
+    implementation hiltViewModel
+    kapt hiltAndroidKapt
+
+    implementation rxJavaLib
+    implementation rxAndroidLib
+
+    implementation activityKtxLib
+
+    implementation timberLib
+
+    testImplementation testjunit
+    testImplementation mockitoKotlin
+    testImplementation mockitoInline
+    testImplementation archXCore
+    testImplementation kotlinTest
+
+    androidTestImplementation androidXJunit
+}
