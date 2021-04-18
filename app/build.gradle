@@ -21,8 +21,19 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+        useIR = true
+    }
+
     buildFeatures {
         viewBinding true
+        compose true
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion "1.0.0-beta04"
     }
 }
 
@@ -37,12 +48,24 @@ dependencies {
     implementation constraintLib
     implementation hiltLib
 
+    implementation composeLib
+    implementation composeToolingLib
+    implementation composeFoundationLib
+    implementation composeMaterialLib
+    implementation composeIconsLib
+    implementation composeActivityLib
+    implementation composeVMLib
+    implementation composeLiveDataLib
+    implementation composeRxLib
+
     implementation coilImageLib
     implementation kotlinlib
     implementation navUILib
     implementation navFragLib
     implementation lifeExtLib
     implementation legacyLib
+
+    implementation coilAccompanistLib
 
     kapt hiltKapt
     implementation hiltViewModel

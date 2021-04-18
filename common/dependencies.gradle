@@ -1,12 +1,11 @@
-
 ext {
 
-    kotlinVersion = "1.4.30"
+    kotlinVersion = "1.4.32"
 
     // UI
     coreKtxVersion = "1.3.2"
     recyclerViewVersion = "1.1.0-rc01"
-    appCompatVersion = '1.2.0'
+    appCompatVersion = '1.3.0-beta01'
     materialVersion = '1.3.0'
     constraintLayoutVersion = '2.0.4'
     swipeLayoutVersion = '1.0.0'
@@ -20,7 +19,7 @@ ext {
     rxandroid = "2.1.1"
     httpLoggingVersion = "4.4.0"
 
-    gson =  "2.8.5"
+    gson = "2.8.5"
     gsonConverter = "2.3.0"
 
     junitVersion = "4.13"
@@ -31,6 +30,7 @@ ext {
     archCoreTestingVersion = '2.1.0'
 
     coilVersion = '1.1.1'
+    coilAccompanist = '0.7.1'
 
     timberVersion = '4.7.1'
 
@@ -38,6 +38,8 @@ ext {
     legacyLibVersion = '1.0.0'
     lifeExtVersion = '2.2.0'
     activityKtxVersion = '1.2.1'
+
+    composeVersion = '1.0.0-beta04'
 
     kotlinlib = "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     recyclerView = "androidx.recyclerview:recyclerview:$recyclerViewVersion"
@@ -47,6 +49,7 @@ ext {
     constraintLib = "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     swipe = "androidx.swiperefreshlayout:swiperefreshlayout:$swipeLayoutVersion"
     coilImageLib = "io.coil-kt:coil:$coilVersion"
+    coilAccompanistLib = "com.google.accompanist:accompanist-coil:$coilAccompanist"
     timberLib = "com.jakewharton.timber:timber:$timberVersion"
 
     // androidX nav
@@ -56,6 +59,29 @@ ext {
     legacyLib = "androidx.legacy:legacy-support-v4:$legacyLibVersion"
     activityKtxLib = "androidx.activity:activity-ktx:$activityKtxVersion"
 
+    // compose setup https://developer.android.com/jetpack/compose/setup
+
+    composeLib = "androidx.compose.ui:ui:$composeVersion"
+    // Tooling support (Previews, etc.)
+    composeToolingLib = "androidx.compose.ui:ui-tooling:$composeVersion"
+    // Foundation (Border, Background, Box, Image, Scroll, shapes, animations, etc.)
+    composeFoundationLib = "androidx.compose.foundation:foundation:$composeVersion"
+    // Material Design
+    composeMaterialLib = "androidx.compose.material:material:$composeVersion"
+    // Material design icons
+    composeIconsLib = "androidx.compose.material:material-icons-core:$composeVersion"
+    composeIconsExtLib = "androidx.compose.material:material-icons-extended:$composeVersion"
+    // Integration with activities
+    composeActivityLib = "androidx.activity:activity-compose:1.3.0-alpha03"
+    // Integration with ViewModels
+    composeVMLib = "androidx.lifecycle:lifecycle-viewmodel-compose:1.0.0-alpha02"
+    // Integration with observables
+    composeLiveDataLib = "androidx.compose.runtime:runtime-livedata:$composeVersion"
+    composeRxLib = "androidx.compose.runtime:runtime-rxjava2:$composeVersion"
+
+    // UI Tests
+    composeAndroidLib = "androidx.compose.ui:ui-test-junit4:$composeVersion"
+
     // dagger hilt
     hiltLib = "com.google.dagger:hilt-android:$hiltVersion"
     hiltKapt = "com.google.dagger:hilt-android-compiler:$hiltVersion"
@@ -64,12 +90,12 @@ ext {
 
     // network libraries
     retrofitLib = "com.squareup.retrofit2:retrofit:$retrofit"
-    okHttpLib   = "com.squareup.okhttp3:okhttp:$okHttp"
-    rxJavaLib   = "io.reactivex.rxjava2:rxjava:$rxjava"
+    okHttpLib = "com.squareup.okhttp3:okhttp:$okHttp"
+    rxJavaLib = "io.reactivex.rxjava2:rxjava:$rxjava"
     rxAndroidLib = "io.reactivex.rxjava2:rxandroid:$rxandroid"
 
-    gsonLib               = "com.google.code.gson:gson:$gson"
-    gsonConverterLib      = "com.squareup.retrofit2:converter-gson:$gsonConverter"
+    gsonLib = "com.google.code.gson:gson:$gson"
+    gsonConverterLib = "com.squareup.retrofit2:converter-gson:$gsonConverter"
 
     retrofitGsonConverter = "com.squareup.retrofit2:converter-gson:$retrofit"
     retrofitRxJavaAdapter = "com.squareup.retrofit2:adapter-rxjava2:$retrofit"
