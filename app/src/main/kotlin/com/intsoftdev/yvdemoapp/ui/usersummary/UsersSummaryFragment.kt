@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.compose.foundation.ExperimentalFoundationApi
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.GridCells
@@ -25,6 +26,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.google.accompanist.coil.CoilImage
+import com.google.accompanist.coil.rememberCoilPainter
 import com.intsoftdev.domain.UserDetails
 import com.intsoftdev.yvdemoapp.R
 import com.intsoftdev.yvdemoapp.viewmodel.ResultState
@@ -121,9 +123,12 @@ fun UserSummaryCard(
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center
         ) {
-            CoilImage(
-                data = userDetails.picUrl,
-                previewPlaceholder = R.drawable.ic_launcher,
+            Image(
+                painter = rememberCoilPainter(
+                    request = userDetails.picUrl,
+                    previewPlaceholder = R.drawable.ic_launcher,
+                    shouldRefetchOnSizeChange = { _, _ -> false },
+                ),
                 contentDescription = "",
                 modifier = Modifier
                     .fillMaxWidth()

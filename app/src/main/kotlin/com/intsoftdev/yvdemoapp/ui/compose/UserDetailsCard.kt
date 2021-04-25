@@ -1,5 +1,6 @@
 package com.intsoftdev.yvdemoapp.ui.compose
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Card
@@ -11,7 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.google.accompanist.coil.CoilImage
+import com.google.accompanist.coil.rememberCoilPainter
 import com.intsoftdev.domain.UserDetails
 import com.intsoftdev.yvdemoapp.R
 
@@ -32,9 +33,12 @@ fun UserDetailsCard(
             elevation = 8.dp,
         ) {
             Row(verticalAlignment = Alignment.Top) {
-                CoilImage(
-                    data = userDetails.picUrl,
-                    previewPlaceholder = R.drawable.ic_launcher,
+                Image(
+                    painter = rememberCoilPainter(
+                        request = userDetails.picUrl,
+                        previewPlaceholder = R.drawable.ic_launcher,
+                        shouldRefetchOnSizeChange = { _, _ -> false },
+                    ),
                     contentDescription = "",
                     modifier = Modifier
                         .width(120.dp)
