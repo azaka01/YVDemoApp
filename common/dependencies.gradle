@@ -30,7 +30,7 @@ ext {
     archCoreTestingVersion = '2.1.0'
 
     coilVersion = '1.1.1'
-    coilAccompanist = '0.7.1'
+    accompanistVersion = '0.8.1'
 
     timberVersion = '4.7.1'
 
@@ -49,7 +49,8 @@ ext {
     constraintLib = "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     swipe = "androidx.swiperefreshlayout:swiperefreshlayout:$swipeLayoutVersion"
     coilImageLib = "io.coil-kt:coil:$coilVersion"
-    coilAccompanistLib = "com.google.accompanist:accompanist-coil:$coilAccompanist"
+    coilAccompanistLib = "com.google.accompanist:accompanist-coil:$accompanistVersion"
+    swipeRefreshAccompanistLib = "com.google.accompanist:accompanist-swiperefresh:$accompanistVersion"
     timberLib = "com.jakewharton.timber:timber:$timberVersion"
 
     // androidX nav

@@ -66,6 +66,7 @@ dependencies {
     implementation legacyLib
 
     implementation coilAccompanistLib
+    implementation swipeRefreshAccompanistLib
 
     kapt hiltKapt
     implementation hiltViewModel

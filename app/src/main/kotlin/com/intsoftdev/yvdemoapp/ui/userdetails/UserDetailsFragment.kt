@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
 import androidx.compose.ui.platform.ComposeView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -26,7 +29,11 @@ class UserDetailsFragment : Fragment() {
     ): View {
         return ComposeView(requireContext()).apply {
             setContent {
-                UserDetailsCard(userDetails = usersViewModel.selectedUser, onClick = {})
+                Scaffold(topBar = {
+                    TopAppBar(title = { Text(text = "${usersViewModel.selectedUser?.displayName}") })
+                }) {
+                    UserDetailsCard(userDetails = usersViewModel.selectedUser, onClick = {})
+                }
             }
         }
     }
